@@ -24,7 +24,6 @@ import subprocess
 import os
 import sys
 
-
 config_file = open("config_initialize.txt")
 
 for line in config_file.readlines():
