@@ -31,7 +31,6 @@ if callfunc == "initialize":
   CHILD_CONTEXT["_context"] = CHILD_CONTEXT
   CHILD_CONTEXT["mycontext"] = {}
 
-
   # This holds the set of already imported modules.   The key is the module
   # name and the value is the module object.
   IMPORTED_MODULE_CACHE = {}
