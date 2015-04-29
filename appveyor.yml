@@ -4,13 +4,10 @@ environment:
     - PYTHON: "C:/Python27"
 init:
   - "ECHO %PYTHON%"
-  - ps: "ls C:/Python*"
 
-install:
+test_script:
   - cd scripts
   - python initialize.py
   - python build.py -t
-
-test_script:
   - cd ../RUNNABLE
   - python utf.py -a
