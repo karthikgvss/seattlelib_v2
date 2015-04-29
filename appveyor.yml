@@ -8,9 +8,9 @@ init:
 
 install:
   - cd scripts
-  - "%PYTHON%/python.exe initialize.py"
-  - "%PYTHON%/python.exe build.py -t"
+  - python initialize.py
+  - python build.py -t
 
 test_script:
   - cd ../RUNNABLE
-  - "%PYTHON%/python.exe utf.py -a"
+  - python utf.py -a
