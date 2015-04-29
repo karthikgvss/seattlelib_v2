@@ -1,5 +1,7 @@
 build: false
 
+os: Unstable
+
 environment:
   matrix:
     - PYTHON: "C:/Python26"
@@ -10,8 +12,8 @@ platform:
 - x64
 
 test_script:
-  - ps: cd scripts
+  - cd scripts
   - python initialize.py
   - python build.py -t
-  - ps: cd ../RUNNABLE
+  - cd ../RUNNABLE
   - python utf.py -a
