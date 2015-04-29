@@ -6,8 +6,8 @@ init:
   - "ECHO %PYTHON%"
 
 test_script:
-  - cd scripts
+  - ps: cd scripts
   - python initialize.py
   - python build.py -t
-  - cd ../RUNNABLE
+  - ps: cd ../RUNNABLE
   - python utf.py -a
