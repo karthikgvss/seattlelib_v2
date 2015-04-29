@@ -4,8 +4,10 @@ environment:
   matrix:
     - PYTHON: "C:/Python26"
     - PYTHON: "C:/Python27"
-init:
-  - "ECHO %PYTHON%"
+
+platform:
+- x86
+- x64
 
 test_script:
   - ps: cd scripts
