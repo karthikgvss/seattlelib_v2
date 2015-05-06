@@ -1,17 +1,15 @@
+language: objective-c
+
 env:
-  - linux
-  - osx
-  
-language: python
+  global:
+    - CXX=clang++
 
-python:
-  - "2.6"
-  - "2.7"
-
-install:
-  - true
+before_install:
+  - brew update
+  - brew install python
 
 script:
+  - python --version
   - cd ./scripts
   - python initialize.py
   - python build.py -t
