@@ -1,5 +1,9 @@
 language: objective-c
 
+-env:	
+-  global:
+-    - CXX=clang++
+
 os:
 - osx
 
