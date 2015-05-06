@@ -8,10 +8,11 @@ os:
   - osx
   
 install:
+  - true
+
+script:
   - cd ./scripts
   - python initialize.py
   - python build.py -t
-
-script:
   - cd ../RUNNABLE
   - python utf.py -a
