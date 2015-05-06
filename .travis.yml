@@ -1,4 +1,4 @@
-os:
+env:
   - linux
   - osx
   
