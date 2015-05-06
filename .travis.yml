@@ -1,8 +1,7 @@
 language: objective-c
 
-env:
-  global:
-    - CXX=clang++
+os:
+- osx
 
 before_install:
   - brew update
