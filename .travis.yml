@@ -1,16 +1,17 @@
-language: objective-c
+matrix:
+  include:
+    - language: objective-c
+      os: osx
 
--env:	
--  global:
--    - CXX=clang++
-
-os:
-- osx
-
-before_install:
-  - brew update
-  - brew install python
-
+    - language: python
+      os: linux
+      
+install:
+    - if [[ "$(uname -s)" == 'Darwin' ]]; then
+       brew update;
+       brew install python;
+      fi
+      
 script:
   - python --version
   - cd ./scripts
