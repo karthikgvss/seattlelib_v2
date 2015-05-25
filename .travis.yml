@@ -1,18 +1,21 @@
+matrix:
+  include:
+    - language: objective-c
+      os: osx
 
-language: python
-python:
-  - "2.6"
-  - "2.7"
-
-os:
-  - linux
-  - osx
-  
+    - language: python
+      os: linux
+      
 install:
+    - if [[ "$(uname -s)" == 'Darwin' ]]; then
+       brew update;
+       brew install python;
+      fi
+      
+script:
+  - python --version
   - cd ./scripts
   - python initialize.py
   - python build.py -t
-
-script:
   - cd ../RUNNABLE
   - python utf.py -a
