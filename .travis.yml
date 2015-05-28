@@ -3,7 +3,10 @@ matrix:
     - language: objective-c
       os: osx
 
-    - language: python
+    - language: python2.6
+      os: linux
+
+    - language: python2.7
       os: linux
       
 install:
