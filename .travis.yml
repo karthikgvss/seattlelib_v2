@@ -8,7 +8,7 @@ matrix:
       
 install:
     - if [[ "$(uname -s)" == 'Darwin' ]]; then
-       brew update;
+       brew tap homebrew/versions;
        brew install python25;
       fi
       
