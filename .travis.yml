@@ -1,15 +1,15 @@
-os:
-  - linux
-  
-language: python
-python:
-   - "2.5"  
-   - "2.6"
-   - "2.7"
+matrix:
+  include:
+    - language: objective-c
+      os: osx
+
+    - language: python
+      os: linux
+      
 install:
     - if [[ "$(uname -s)" == 'Darwin' ]]; then
        brew update;
-       brew install python;
+       brew install pyenv;
       fi
       
 script:
