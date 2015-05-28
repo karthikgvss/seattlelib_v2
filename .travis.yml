@@ -4,10 +4,15 @@ matrix:
       os: osx
 
     - language: python
+      python:
+         - "2.5"
+         - "2.6"
+         - "2.7"
       os: linux
       
 install:
     - if [[ "$(uname -s)" == 'Darwin' ]]; then
+       brew update;
        brew tap homebrew/versions;
        brew install python25;
       fi
