@@ -4,8 +4,8 @@ matrix:
       os: osx
       install:
           - if [[ "$(uname -s)" == 'Darwin' ]]; then
-             pyenv install 2.6.9;
-             pyenv global 2.6.9;
+             pyenv install 2.6;
+             pyenv global 2.6;
             fi
           - export PYENV_ROOT="${HOME}/.pyenv"
           - if [ -d "${PYENV_ROOT}" ]; then
@@ -17,8 +17,8 @@ matrix:
       os: osx
       install:
           - if [[ "$(uname -s)" == 'Darwin' ]]; then
-             pyenv install 2.5.6;
-             pyenv global 2.5.6;
+             pyenv install 2.5;
+             pyenv global 2.5;
             fi
           - export PYENV_ROOT="${HOME}/.pyenv"
           - if [ -d "${PYENV_ROOT}" ]; then
