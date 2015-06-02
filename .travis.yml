@@ -3,7 +3,6 @@ matrix:
     - language: objective-c
       os: osx
       install:
-          - travis_fold:start:INSTALL folding starts
           - if [[ "$(uname -s)" == 'Darwin' ]]; then
              pyenv install 2.6.9;
              pyenv global 2.6.9;
@@ -13,11 +12,10 @@ matrix:
              export PATH="${PYENV_ROOT}/bin:${PATH}";
              eval "$(pyenv init -)";
             fi
-          - travis_fold:end:INSTALL folding ends
+          
     - language: objective-c
       os: osx
       install:
-          - echo "travis_fold:start:INSTALL folding starts"
           - if [[ "$(uname -s)" == 'Darwin' ]]; then
              pyenv install 2.5.6;
              pyenv global 2.5.6;
@@ -27,7 +25,6 @@ matrix:
              export PATH="${PYENV_ROOT}/bin:${PATH}";
              eval "$(pyenv init -)";
             fi
-          - echo "travis_fold:end:INSTALL folding ends"
  
     - language: objective-c
       os: osx
