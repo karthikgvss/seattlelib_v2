@@ -5,7 +5,7 @@ matrix:
       install:
           - travis_fold:start:INSTALL folding starts
           - if [[ "$(uname -s)" == 'Darwin' ]]; then
-             pyenv install -v 2.6.9;
+             pyenv install 2.6.9;
              pyenv global 2.6.9;
             fi
           - export PYENV_ROOT="${HOME}/.pyenv"
@@ -19,7 +19,7 @@ matrix:
       install:
           - echo "travis_fold:start:INSTALL folding starts"
           - if [[ "$(uname -s)" == 'Darwin' ]]; then
-             pyenv install -v 2.5.6;
+             pyenv install 2.5.6;
              pyenv global 2.5.6;
             fi
           - export PYENV_ROOT="${HOME}/.pyenv"
