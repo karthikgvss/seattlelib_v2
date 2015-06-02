@@ -42,6 +42,7 @@ matrix:
       os: linux
       install:
         - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then pip install protobuf-py3==2.5.1 && pip install --allow-all-external --allow-unverified protobuf-py3 -r requirements3.txt; fi
+          sudo python setup.py develop
  
     - language: python
       python: '2.6'
