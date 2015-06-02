@@ -2,19 +2,55 @@ matrix:
   include:
     - language: objective-c
       os: osx
-
-    - language: python2.6
+      install:
+          - echo "travis_fold:start:INSTALL folding starts"
+          - if [[ "$(uname -s)" == 'Darwin' ]]; then
+             pyenv install -v 2.6.9;
+             pyenv global 2.6.9;
+            fi
+          - export PYENV_ROOT="${HOME}/.pyenv"
+          - if [ -d "${PYENV_ROOT}" ]; then
+             export PATH="${PYENV_ROOT}/bin:${PATH}";
+             eval "$(pyenv init -)";
+            fi
+          - echo "travis_fold:end:INSTALL folding ends"
+    - language: objective-c
+      os: osx
+      install:
+          - echo "travis_fold:start:INSTALL folding starts"
+          - if [[ "$(uname -s)" == 'Darwin' ]]; then
+             pyenv install -v 2.5.6;
+             pyenv global 2.5.6;
+            fi
+          - export PYENV_ROOT="${HOME}/.pyenv"
+          - if [ -d "${PYENV_ROOT}" ]; then
+             export PATH="${PYENV_ROOT}/bin:${PATH}";
+             eval "$(pyenv init -)";
+            fi
+          - echo "travis_fold:end:INSTALL folding ends"
+ 
+    - language: objective-c
+      os: osx
+      install:
+        - if [[ "$(uname -s)" == 'Darwin' ]]; then
+           brew update;
+           brew install python;
+          fi
+ 
+    - language: perl
+      python: '3.3'
+      os: linux
+      install:
+        - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then pip install protobuf-py3==2.5.1 && pip install --allow-all-external --allow-unverified protobuf-py3 -r requirements3.txt; fi
+ 
+    - language: python
+      python: '2.6'
+      os: linux
+ 
+    - language: python
+      python: '2.7'
       os: linux
 
-    - language: python2.7
-      os: linux
-      
-install:
-    - if [[ "$(uname -s)" == 'Darwin' ]]; then
-       brew update;
-       brew install pyenv;
-      fi
-      
 script:
   - python --version
   - cd ./scripts
