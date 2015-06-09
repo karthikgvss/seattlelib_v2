@@ -29,6 +29,19 @@ matrix:
     - language: objective-c
       os: osx
       install:
+          - if [[ "$(uname -s)" == 'Darwin' ]]; then
+             pyenv install 2.7-dev;
+             pyenv global 2.7-dev;
+            fi
+          - export PYENV_ROOT="${HOME}/.pyenv"
+          - if [ -d "${PYENV_ROOT}" ]; then
+             export PATH="${PYENV_ROOT}/bin:${PATH}";
+             eval "$(pyenv init -)";
+            fi
+            
+    - language: objective-c
+      os: osx
+      install:
         - if [[ "$(uname -s)" == 'Darwin' ]]; then
            brew update;
            brew install python;
