@@ -41,10 +41,10 @@ matrix:
         - sudo apt-add-repository -y ppa:fkrull/deadsnakes
         - sudo apt-get update
         - sudo apt-get -y install python2.5
-        - sudo alias python='python2.5'
-        - sudo alias python2='python2.5'
-        - sudo alias pydoc='pydoc2.5'
-        - sudo alias pygettext='pygettext2.5'
+        - alias python='python2.5'
+        - alias python2='python2.5'
+        - alias pydoc='pydoc2.5'
+        - alias pygettext='pygettext2.5'
  
     - language: python
       python: '2.6'
