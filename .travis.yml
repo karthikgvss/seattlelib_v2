@@ -37,7 +37,7 @@ matrix:
     - language: perl
       os: linux
       install:
-        - unlink /usr/bin/python
+        - sudo unlink /usr/bin/python
         - export DEBIAN_FRONTEND=noninteractive
         - sudo apt-add-repository -y ppa:fkrull/deadsnakes
         - sudo apt-get update
