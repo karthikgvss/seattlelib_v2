@@ -42,7 +42,8 @@ matrix:
           fi
  # The below are configurations for Linux instances
  # Python 2.5 on Linux
-    - language: python
+    - language: perl
+      python: '2.5'
       os: linux
       install:
         - export DEBIAN_FRONTEND=noninteractive
